@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Noto+Serif+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans JP", "Noto Sans KR", sans-serif;
+  --font-serif: "Shippori Mincho", "Noto Serif JP", "Noto Serif KR", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-ninja-dark: #121212;
+  --color-ninja-charcoal: #1a1a1a;
+  --color-ninja-slate: #242424;
+  --color-ninja-vermilion: #b5442e;
+  --color-ninja-vermilion-hover: #9c3420;
+  --color-ninja-gold: #cfa856;
+  --color-ninja-cream: #faf6f0;
+  --color-ninja-sand: #f0e6d6;
+}
+
+/* Custom Japanese Wagara (patterns) and utility styles */
+.pattern-seigaiha {
+  background-color: var(--color-ninja-dark);
+  background-image: radial-gradient(circle at 100% 150%, transparent 24%, var(--color-ninja-charcoal) 24%, var(--color-ninja-charcoal) 28%, transparent 28%, transparent),
+                    radial-gradient(circle at 0% 150%, transparent 24%, var(--color-ninja-charcoal) 24%, var(--color-ninja-charcoal) 28%, transparent 28%, transparent),
+                    radial-gradient(circle at 50% 100%, transparent 19%, var(--color-ninja-charcoal) 19%, var(--color-ninja-charcoal) 23%, transparent 23%, transparent),
+                    radial-gradient(circle at 100% 50%, transparent 19%, var(--color-ninja-charcoal) 19%, var(--color-ninja-charcoal) 23%, transparent 23%, transparent),
+                    radial-gradient(circle at 0% 50%, transparent 19%, var(--color-ninja-charcoal) 19%, var(--color-ninja-charcoal) 23%, transparent 23%, transparent);
+  background-size: 80px 40px;
+}
+
+.pattern-asanoha {
+  background-color: #faf6f0;
+  background-image: 
+    linear-gradient(30deg, #f0e6d6 12%, transparent 12.5%, transparent 87%, #f0e6d6 87.5%, #f0e6d6),
+    linear-gradient(150deg, #f0e6d6 12%, transparent 12.5%, transparent 87%, #f0e6d6 87.5%, #f0e6d6),
+    linear-gradient(30deg, #f0e6d6 12%, transparent 12.5%, transparent 87%, #f0e6d6 87.5%, #f0e6d6),
+    linear-gradient(150deg, #f0e6d6 12%, transparent 12.5%, transparent 87%, #f0e6d6 87.5%, #f0e6d6),
+    linear-gradient(60deg, #f3ebd8 25%, transparent 25.5%, transparent 75%, #f3ebd8 75.5%, #f3ebd8),
+    linear-gradient(60deg, #f3ebd8 25%, transparent 25.5%, transparent 75%, #f3ebd8 75.5%, #f3ebd8);
+  background-size: 40px 70px;
+  background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5442e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cfa856;
+}
+
+/* Brush stroke font support */
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}
+
